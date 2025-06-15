@@ -15,4 +15,13 @@ describe("calculateCanvasSize", () => {
 
     expect(result).toBe(0);
   });
+
+  test("should return zero when width is zero", () => {
+    const length = "5";
+    const width = "0";
+
+    const result = calculateCanvasSize(length, width);
+
+    expect(result).toBe(0);
+  });
 });
