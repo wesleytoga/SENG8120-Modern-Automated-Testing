@@ -11,4 +11,9 @@ describe("paint required calculator", () => {
     const result = paintRequiredCalculator(100, 0);
     expect(result).toBe(Infinity);
   });
+
+  test("should handle negative values", () => {
+    const result = paintRequiredCalculator(-50, 10);
+    expect(result).toBe(-5);
+  });
 });
