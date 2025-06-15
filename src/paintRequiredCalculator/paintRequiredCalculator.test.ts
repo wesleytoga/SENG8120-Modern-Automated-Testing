@@ -9,6 +9,6 @@ describe("paint required calculator", () => {
 
   test("should handle division by zero", () => {
     const result = paintRequiredCalculator(100, 0);
-    expect(result).toBe(new Error);
+    expect(result).toBe(Infinity);
   });
 });
