@@ -1,3 +1,6 @@
-export default function calculateTotalCost(paintCost: number, laborCost: number): number {
+export default function calculateTotalCost(
+  paintCost: number,
+  laborCost: number
+): number {
   return paintCost + laborCost;
 }

@@ -21,4 +21,3 @@ describe('estimatePaintingTime', () => {
     expect(estimatePaintingTime(-100, -10)).toBe(10);
   });
 });
-

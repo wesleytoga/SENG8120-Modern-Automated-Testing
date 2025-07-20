@@ -1,1 +1,1 @@
-export { default } from "./calculateCanvasDiagonal";
+export { default } from './calculateCanvasDiagonal';
