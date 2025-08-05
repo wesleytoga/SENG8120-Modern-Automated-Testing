@@ -6,6 +6,29 @@ Version: Alpaca
 
 This repository houses the code we require for examples and assignments.
 
+## Assignment 4: Paint Calculator
+
+I built a paint calculator for a modernistic painter who needs to figure out how much paint is required for mass production of their artwork. The artwork has a rectangle with a triangle on top, where the triangle base is always 1/3 of the rectangle length.
+
+### What I implemented
+
+- calculateTriangleArea: computes triangle area with base = rectangle length / 3
+- calculateArtworkArea: adds rectangle and triangle areas together
+- calculatePaintForCopies: figures out total paint needed for any number of copies
+
+### Testing approach
+
+I used TDD methodology - wrote failing tests first, then implemented the functions to make them pass. Each function has its own test file with multiple test cases.
+
+### Example
+
+Running the program with 5000 copies of a 3m x 2m artwork shows:
+```
+3070.18 liters of paint required for 5000 copies of 3m x 2m artwork.
+```
+
+The math: Rectangle (6 m²) + Triangle (1 m²) = 7 m² per copy. 5000 copies = 35,000 m² total. At 11.4 m²/L coverage = 3070.18 liters needed.
+
 ## Repository Usage
 
 This repository will contain branches of code.
