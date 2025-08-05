@@ -1,13 +1,14 @@
-import calculateCanvasSize from "./calculateCanvasSize";
-import paintRequiredCalculator from "./paintRequiredCalculator";
+import calculatePaintForCopies from "./calculatePaintForCopies/calculatePaintForCopies";
 
 function main() {
-  const area = calculateCanvasSize("10", "20");
+  const length = 3;
+  const width = 2;
+  const copies = 5000;
   const coveragePerLiter = 11.4;
 
-  const paintRequired = paintRequiredCalculator(area, coveragePerLiter);
+  const paintRequired = calculatePaintForCopies(length, width, copies, coveragePerLiter);
 
-  console.log(`${paintRequired} is required to cover ${area} of canvas.`);
+  console.log(`${paintRequired.toFixed(2)} liters of paint required for ${copies} copies of ${length}m x ${width}m artwork.`);
 }
 
 main();
