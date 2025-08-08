@@ -20,6 +20,16 @@ I built a paint calculator for a modernistic painter who needs to figure out how
 
 I used TDD methodology - wrote failing tests first, then implemented the functions to make them pass. Each function has its own test file with multiple test cases.
 
+I also added integration tests that verify the functions work together correctly across different scenarios:
+- Main assignment scenario (5000 copies of 3m x 2m artwork)
+- Smaller artwork with fewer copies 
+- Large artwork dimensions with calculated expectations
+
+To run just the integration tests:
+```bash
+npm test integration
+```
+
 ### Example
 
 Running the program with 5000 copies of a 3m x 2m artwork shows:
