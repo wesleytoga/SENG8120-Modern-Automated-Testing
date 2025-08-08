@@ -39,4 +39,22 @@ describe('Integration Tests for Paint Calculator', () => {
     expect(totalArea).toBeCloseTo(2.33, 1);
     expect(paintNeeded).toBeCloseTo(4.67, 1);
   });
+
+  test('should handle large artwork correctly', () => {
+    const length = 10;
+    const width = 8;
+    const copies = 100;
+    const coverage = 12;
+    
+    const triangleArea = calculateTriangleArea(length, width);
+    const totalArea = calculateArtworkArea(length, width);
+    const paintNeeded = calculatePaintForCopies(length, width, copies, coverage);
+    
+    const expectedTriangleArea = (10/3 * 8) / 2;
+    const expectedTotalArea = 80 + expectedTriangleArea;
+    
+    expect(triangleArea).toBeCloseTo(expectedTriangleArea, 2);
+    expect(totalArea).toBeCloseTo(expectedTotalArea, 2);
+    expect(paintNeeded).toBeCloseTo((expectedTotalArea * copies) / coverage, 2);
+  });
 });
