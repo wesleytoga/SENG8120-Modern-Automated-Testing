@@ -2,8 +2,8 @@ import calculateTriangleArea from '../calculateTriangleArea/calculateTriangleAre
 import calculateArtworkArea from '../calculateArtworkArea/calculateArtworkArea';
 import calculatePaintForCopies from '../calculatePaintForCopies/calculatePaintForCopies';
 
-describe('Integration Tests for Paint Calculator', () => {
-  test('should calculate basic artwork dimensions', () => {
+describe('Paint Calculator Integration Tests', () => {
+  test('should calculate correct triangle and total area for basic dimensions', () => {
     const length = 3;
     const width = 2;
     
@@ -14,7 +14,7 @@ describe('Integration Tests for Paint Calculator', () => {
     expect(totalArea).toBe(7);
   });
 
-  test('should calculate paint for assignment scenario', () => {
+  test('should calculate paint required for the main assignment scenario (5000 copies)', () => {
     const length = 3;
     const width = 2;
     const copies = 5000;
@@ -25,7 +25,7 @@ describe('Integration Tests for Paint Calculator', () => {
     expect(paintNeeded).toBeCloseTo(3070.18, 2);
   });
 
-  test('should work with smaller artwork', () => {
+  test('should handle smaller artwork with fewer copies', () => {
     const length = 2;
     const width = 1;
     const copies = 10;
@@ -40,7 +40,7 @@ describe('Integration Tests for Paint Calculator', () => {
     expect(paintNeeded).toBeCloseTo(4.67, 1);
   });
 
-  test('should handle large artwork correctly', () => {
+  test('should handle large artwork dimensions with calculated expectations', () => {
     const length = 10;
     const width = 8;
     const copies = 100;
