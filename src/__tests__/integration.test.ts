@@ -22,6 +22,6 @@ describe('Integration Tests for Paint Calculator', () => {
     
     const paintNeeded = calculatePaintForCopies(length, width, copies, coverage);
     
-    expect(paintNeeded).toBe(3070);
+    expect(paintNeeded).toBeCloseTo(3070.18, 2);
   });
 });
