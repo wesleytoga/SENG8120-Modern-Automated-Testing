@@ -24,4 +24,19 @@ describe('Integration Tests for Paint Calculator', () => {
     
     expect(paintNeeded).toBeCloseTo(3070.18, 2);
   });
+
+  test('should work with smaller artwork', () => {
+    const length = 2;
+    const width = 1;
+    const copies = 10;
+    const coverage = 5;
+    
+    const triangleArea = calculateTriangleArea(length, width);
+    const totalArea = calculateArtworkArea(length, width);
+    const paintNeeded = calculatePaintForCopies(length, width, copies, coverage);
+    
+    expect(triangleArea).toBeCloseTo(0.33, 1);
+    expect(totalArea).toBeCloseTo(2.33, 1);
+    expect(paintNeeded).toBeCloseTo(4.67, 1);
+  });
 });
